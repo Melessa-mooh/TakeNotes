@@ -48,6 +48,7 @@ export default function AuthForm({ mode, onSubmit }) {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          
           <input
             type="password"
             placeholder="Password"
