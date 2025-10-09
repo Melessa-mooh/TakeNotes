@@ -81,9 +81,10 @@ By providing a single platform for organized and searchable content, TekNotes re
 ## 👨‍💻 Developers
 
 **TekNotes Development Team**  
-Benolirao, Clyde
-Cabasag, Ma. Melessa
-Dabalos, Erica
+**Benolirao, Clyde**  
+**Cabasag, Ma. Melessa**  
+**Dabalos, Erica**  
+
 Cebu Institute of Technology – University  
 **BSIT Students | 2025**
 
