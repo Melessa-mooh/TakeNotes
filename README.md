@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 📚 TekNotes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**TekNotes** is a **centralized digital learning platform** designed to help students easily access reliable, well-organized, and course-specific study materials — all in one place.  
+Instead of spending hours searching the internet, TekNotes streamlines access to notes, presentations, and resources, allowing students to focus more on learning and preparation.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 Project Overview
 
-### `npm start`
+TekNotes bridges the gap between scattered online learning resources and student efficiency.  
+By providing a single platform for organized and searchable content, TekNotes reduces distractions, saves valuable time, and enhances productivity for every learner.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Core Features
 
-### `npm test`
+1️⃣ **Upload & Access Notes**  
+   - Students can upload and view study files such as **PDFs, PPTs, and DOCs**.  
+   - Keeps materials stored and accessible in one secure space.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2️⃣ **Smart Search & Filters**  
+   - Quickly find resources by **subject, tags, or teacher**.  
+   - Simplifies browsing through a large repository of notes.
 
-### `npm run build`
+3️⃣ **Study Groups**  
+   - Create or join verified study groups.  
+   - Includes built-in **chat and file sharing** for seamless collaboration.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4️⃣ **Review & Feedback**  
+   - Students can **rate and review** shared materials.  
+   - Helps others find the most reliable and useful content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5️⃣ **Bookmark Favorites**  
+   - Save preferred study materials for **quick and easy access** later.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6️⃣ **Personalized Profiles**  
+   - Users can store **study preferences** and customize their experience.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧠 Vision
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> “To empower every student with a centralized and distraction-free platform for smarter, faster, and more effective learning.”
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tech Stack
 
-## Learn More
+### 🎨 **Frontend**
+- **React.js** – For creating dynamic and responsive user interfaces  
+- **React Router** – For managing navigation and routes  
+- **Custom CSS (auth.css)** – For consistent and elegant styling  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ⚙️ **Backend**
+- **Spring Boot (Java)** – Main backend framework used for building RESTful APIs  
+- **MySQL** – Relational database for storing user accounts, notes, and study data  
+- **Postman** – Used for testing API endpoints during backend integration  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 💻 **Version Control**
+- **Git & GitHub** – For collaboration and project tracking
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📸 UI Highlights
 
-### Analyzing the Bundle Size
+- 🏠 **Landing Page** — Choose between signing in or creating an account  
+- 🔐 **Login & Registration Pages** — Clean, minimalist design for easy access  
+- 📊 **Dashboard (Upcoming)** — Overview of uploaded notes, study groups, and soon  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 💡 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Integration between **Spring Boot REST API** and **React Frontend**  
+- Real-time data synchronization between frontend and backend  
+- Dashboard analytics for tracking uploaded/downloaded notes  
+- Advanced file management and group collaboration tools  
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 👨‍💻 Developers
 
-### Deployment
+**TekNotes Development Team**  
+Benolirao, Clyde
+Cabasag, Ma. Melessa
+Dabalos, Erica
+Cebu Institute of Technology – University  
+**BSIT Students | 2025**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### 📎 Repository
+[🔗 GitHub Repository](https://github.com/Melessa-mooh/TekNotes)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+> Made with ❤️ using **React.js**, **Spring Boot**, **Java**, **MySQL**, and **Postman** — for students, by students.
