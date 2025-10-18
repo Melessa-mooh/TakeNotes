@@ -7,9 +7,12 @@ export default function Login() {
   const handleLogin = (data) => {
     console.log("Login data:", data);
 
-  
     if (data.email && data.password) {
-      navigate("/dashboard"); 
+      const storedName = localStorage.getItem("userFullName");
+      if (!storedName) {
+        localStorage.setItem("userFullName", "Student"); // fallback
+      }
+      navigate("/dashboard");
     } else {
       alert("Please enter valid credentials.");
     }

@@ -10,7 +10,8 @@ export default function AuthForm({ mode, onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ name, email, password });
+    onSubmit({ fullName: name, email, password });
+
 
     if (mode === "register") {
       navigate("/login"); // after registration → go to Sign In

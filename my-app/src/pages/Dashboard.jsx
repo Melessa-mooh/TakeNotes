@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "../styles/dashboard.css";
 import { Link } from "react-router-dom";
 
@@ -94,6 +95,14 @@ export default function Dashboard() {
     },
   ]);
 
+  const [fullName, setFullName] = useState("");
+
+useEffect(() => {
+  const name = localStorage.getItem("userFullName");
+  if (name) setFullName(name);
+}, []);
+
+
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) => (
       <span key={i} className={`star ${i < Math.floor(rating) ? "filled" : i < rating ? "half" : ""}`}>
@@ -174,7 +183,8 @@ export default function Dashboard() {
 
         {/* Welcome Section */}
         <div className="welcome-section">
-          <h2>Welcome back, Student!</h2>
+          <h2>Welcome back, {fullName || "Student"}!</h2>
+
           <p>Here's what's happening with your academic resources today.</p>
         </div>
 
