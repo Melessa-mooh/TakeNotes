@@ -24,9 +24,10 @@ export default function Login() {
 
         if (result.includes("successful")) {
           alert("✅ Login successful!");
-          // Optional: Save user session (basic)
+
           localStorage.setItem("userEmail", data.email);
-          // Redirect to Dashboard
+          localStorage.setItem("userFullName", "Student");
+
           navigate("/dashboard");
         } else {
           alert("❌ " + result);

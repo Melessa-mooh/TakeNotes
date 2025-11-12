@@ -1,6 +1,9 @@
 import AuthForm from "../components/AuthForm";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
+
   const handleRegister = async (data) => {
     console.log("Register data:", data);
 
@@ -18,6 +21,11 @@ export default function Register() {
 
       if (response.ok) {
         alert("✅ Registration successful!");
+
+        if (data.fullName) {
+          localStorage.setItem("userFullName", data.fullName);
+        }
+        navigate("/dashboard");
       } else {
         const error = await response.text();
         alert("❌ Registration failed: " + error);
