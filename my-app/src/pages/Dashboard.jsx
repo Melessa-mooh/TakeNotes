@@ -246,6 +246,7 @@ useEffect(() => {
                     </button>
                     <button className="save-btn">
                       <Bookmark size={18} />
+                      
                       Save
                     </button>
                     <button className="download-btn">
