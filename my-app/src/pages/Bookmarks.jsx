@@ -141,14 +141,15 @@ export default function Dashboard() {
             My Materials
           </Link>
           <Link to="/reviews" className="nav-item">
-                      <MessageCircle size={18} />
-                      Reviews
-                    </Link>
+          <MessageCircle size={18} />
+            Reviews
+            </Link>
+            <Link to="/downloads" className="nav-item"> 
+             <Download size={18} /> 
+             Downloads
+            </Link>
 
-          <Link to="/groups" className="nav-item">
-            <Users size={18} />
-            Study Groups
-          </Link>
+          
 
           {/* ✅ BOOKMARKS LINK FIXED */}
           <Link to="/bookmarks" className="nav-item">
@@ -156,10 +157,7 @@ export default function Dashboard() {
             Bookmarks
           </Link>
 
-          <Link to="/search" className="nav-item">
-            <Search size={18} />
-            Search
-          </Link>
+          
         </nav>
 
         <div className="sidebar-footer">
