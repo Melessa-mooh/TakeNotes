@@ -135,7 +135,10 @@ export default function Dashboard() {
             <FileText size={18} />
             My Materials
           </Link>
-
+          {/* UPDATED: Changed icon to Download */}
+          <Link to="/downloads" className="nav-item"> 
+            <Download size={18} /> 
+            Downloads
           </Link>
           <Link to="/bookmarks" className="nav-item">
             <Bookmark size={18} />
