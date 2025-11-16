@@ -133,6 +133,10 @@ useEffect(() => {
             <FileText size={18} />
             My Materials
           </Link>
+          <Link to="/reviews" className="nav-item">
+            <MessageCircle size={18} />
+            Reviews
+          </Link>
           <Link to="/groups" className="nav-item">
             <Users size={18} />
             Study Groups

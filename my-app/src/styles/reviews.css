@@ -1,0 +1,57 @@
+/* Add this CSS to src/styles/reviews.css */
+
+/* Styles for the "Reviews" title in the main header */
+.header .header-left .reviews-page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    /* This overrides the search bar from the dashboard */
+}
+
+/* Wrapper for the toolbar to give it padding */
+.reviews-toolbar-wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 0 32px 24px; /* Matches dashboard.css padding */
+}
+
+/* Style for the "All Subjects" dropdown */
+.subject-filter {
+    /* Making it look like the search-bar */
+    background: #f1f5f9;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    color: #64748b;
+    min-width: 150px;
+}
+
+/* Style for the "My Reviews" button (from your screenshot) */
+.my-reviews-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #8B0000; /* Red color from your other buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.my-reviews-btn:hover {
+    background: #5C0000;
+}
+
+/* Wrapper for the list to give it padding */
+.reviews-list-wrapper {
+    padding: 0 32px 32px;
+}
+
+/* Ensure the star in the stat-card icon box is visible */
+.stat-icon svg {
+    color: white; /* dashboard.css was making it gray */
+}
