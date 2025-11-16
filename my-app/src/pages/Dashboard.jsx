@@ -10,19 +10,16 @@ import {
   User,
   Menu,
   Bookmark,
-  Users,
   TrendingUp,
   FileText,
   MoreVertical,
-  MessageCircle,
-  Download
+  Download // Import the Download icon
 } from "lucide-react";
 
 export default function Dashboard() {
   const [stats] = useState({
     uploadedNotes: { count: 24, change: "+3 this week" },
     bookmarked: { count: 156, change: "+12 this week" },
-    studyGroups: { count: 8, change: "2 active now" },
     totalDownloads: { count: "2.4K", change: "+18% this month" },
   });
 
@@ -62,45 +59,50 @@ export default function Dashboard() {
     },
   ]);
 
-  const [studyGroups] = useState([
+  // Data for the "My Recent Downloads" section
+  const [recentDownloads] = useState([
     {
-      id: 1,
-      name: "CS301 Study Group",
-      description: "Algorithms & Data Structures",
-      avatar: "CS",
-      members: 24,
-      lastActive: "15 min ago",
-      color: "bg-blue-500",
-      unread: 5,
+      id: 4,
+      title: "Physics I - Kinematics",
+      subject: "Physics",
+      professor: "Dr. Smith",
+      fileType: "PDF",
+      uploadTime: "30 min ago", 
+      rating: 4.6,
+      reviews: 55,
+      downloads: 120, 
     },
     {
-      id: 2,
-      name: "Calculus Warriors",
-      description: "Advanced Calculus",
-      avatar: "CA",
-      members: 18,
-      lastActive: "2 hours ago",
-      color: "bg-indigo-500",
-      unread: 0,
+      id: 5,
+      title: "Intro to Economics",
+      subject: "Economics",
+      professor: "Prof. Kim",
+      fileType: "DOCX",
+      uploadTime: "1 hour ago",
+      rating: 4.1,
+      reviews: 15,
+      downloads: 22,
     },
-    {
+     {
       id: 3,
-      name: "Physics Lab Partners",
-      description: "Quantum Physics",
-      avatar: "PH",
-      members: 12,
-      lastActive: "1 hour ago",
-      color: "bg-purple-500",
-      unread: 3,
+      title: "World History - Renaissance Era",
+      subject: "History",
+      professor: "Prof. Chen",
+      fileType: "DOCX",
+      uploadTime: "1 day ago",
+      rating: 4.2,
+      reviews: 18,
+      downloads: 34,
     },
   ]);
 
+
   const [fullName, setFullName] = useState("");
 
-useEffect(() => {
-  const name = localStorage.getItem("userFullName");
-  if (name) setFullName(name);
-}, []);
+  useEffect(() => {
+    const name = localStorage.getItem("userFullName");
+    if (name) setFullName(name);
+  }, []);
 
 
   const renderStars = (rating) => {
@@ -133,17 +135,14 @@ useEffect(() => {
             <FileText size={18} />
             My Materials
           </Link>
-          <Link to="/groups" className="nav-item">
-            <Users size={18} />
-            Study Groups
+          {/* UPDATED: Changed icon to Download */}
+          <Link to="/downloads" className="nav-item"> 
+            <Download size={18} /> 
+            Downloads
           </Link>
           <Link to="/bookmarks" className="nav-item">
             <Bookmark size={18} />
             Bookmarks
-          </Link>
-          <Link to="/search" className="nav-item">
-            <Search size={18} />
-            Search
           </Link>
         </nav>
 
@@ -184,30 +183,28 @@ useEffect(() => {
         {/* Welcome Section */}
         <div className="welcome-section">
           <h2>Welcome back, {fullName || "Student"}!</h2>
-
           <p>Here's what's happening with your academic resources today.</p>
         </div>
 
         {/* Stats Grid */}
         <div className="stats-grid">
-  {Object.entries(stats).map(([key, value], index) => (
-    <div className="stat-card" key={index}>
-      <div className="stat-header">
-        <span className="stat-label">{key.replace(/([A-Z])/g, " $1").trim()}</span>
-        <div className={`stat-icon ${["red", "red", "red", "red"][index]}`}>
-          {(() => {
-            const icons = [FileText, Bookmark, Users, TrendingUp];
-            const Icon = icons[index];
-            return <Icon size={24} />;
-          })()}
+          {Object.entries(stats).map(([key, value], index) => (
+            <div className="stat-card" key={index}>
+              <div className="stat-header">
+                <span className="stat-label">{key.replace(/([A-Z])/g, " $1").trim()}</span>
+                <div className={`stat-icon ${["red", "red", "red", "red"][index]}`}>
+                  {(() => {
+                    const icons = [FileText, Bookmark, TrendingUp];
+                    const Icon = icons[index];
+                    return <Icon size={24} />;
+                  })()}
+                </div>
+              </div>
+              <div className="stat-number">{value.count}</div>
+              <div className={`stat-change ${index === 2 ? "active" : "positive"}`}>{value.change}</div>
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="stat-number">{value.count}</div>
-      <div className={`stat-change ${index === 2 ? "active" : "positive"}`}>{value.change}</div>
-    </div>
-  ))}
-</div>
-
 
         {/* Content Grid */}
         <div className="content-grid">
@@ -215,7 +212,7 @@ useEffect(() => {
           <section className="content-section">
             <div className="section-header">
               <h3>Recent Uploads</h3>
-              <Link to="/uploads" className="view-all">View all</Link> {}
+              <Link to="/uploads" className="view-all">View all</Link>
             </div>
 
             <div className="uploads-list">
@@ -230,8 +227,10 @@ useEffect(() => {
                       {upload.subject} • {upload.professor}
                     </p>
                     <div className="upload-footer">
-                      <span className="file-type">{upload.fileType}</span>
-                      <span className="upload-time">{upload.uploadTime}</span>
+                      <div className="file-info-block">
+                        <span className="file-type">{upload.fileType}</span>
+                        <span className="upload-time">{upload.uploadTime}</span>
+                      </div>
                       <div className="rating">
                         {renderStars(upload.rating)}
                         <span>
@@ -246,7 +245,6 @@ useEffect(() => {
                     </button>
                     <button className="save-btn">
                       <Bookmark size={18} />
-                      
                       Save
                     </button>
                     <button className="download-btn">
@@ -259,33 +257,48 @@ useEffect(() => {
             </div>
           </section>
 
-          {/* Study Groups */}
-          <section className="content-section groups-section">
+          {/* My Recent Downloads */}
+          <section className="content-section downloads-section">
             <div className="section-header">
-              <h3>My Study Groups</h3>
-              <Link to="/groups" className="view-all">View all</Link> {}
+              <h3>Recent Downloads</h3>
+              <Link to="/downloads" className="view-all">View all</Link>
             </div>
 
-            <div className="groups-list">
-              {studyGroups.map((group) => (
-                <div key={group.id} className="group-card">
-                  <div className="group-header">
-                    <div className={`group-avatar ${group.color}`}>{group.avatar}</div>
-                    <div className="group-info">
-                      <h4>{group.name}</h4>
-                      <p>{group.description}</p>
-                      <div className="group-meta">
-                        <Users size={14} />
-                        <span>{group.members} members</span>
+            <div className="uploads-list">
+              {recentDownloads.map((download) => (
+                <div key={download.id} className="upload-card">
+                  <div className="upload-icon">
+                    <FileText size={24} />
+                  </div>
+                  <div className="upload-content">
+                    <h4>{download.title}</h4>
+                    <p className="upload-meta">
+                      {download.subject} • {download.professor}
+                    </p>
+                    <div className="upload-footer">
+                      <div className="file-info-block">
+                        <span className="file-type">{download.fileType}</span>
+                        <span className="upload-time">{download.uploadTime}</span>
+                      </div>
+                      <div className="rating">
+                        {renderStars(download.rating)}
+                        <span>
+                          {download.rating} ({download.reviews})
+                        </span>
                       </div>
                     </div>
-                    {group.unread > 0 && <div className="unread-badge">{group.unread}</div>}
                   </div>
-                  <div className="group-footer">
-                    <span className="last-active">{group.lastActive}</span>
-                    <button className="chat-btn">
-                      <MessageCircle size={16} />
-                      Open Chat
+                  <div className="upload-actions">
+                    <button className="more-btn">
+                      <MoreVertical size={20} />
+                    </button>
+                    <button className="save-btn">
+                      <Bookmark size={18} />
+                      Save
+                    </button>
+                    <button className="download-btn">
+                      <Download size={18} />
+                      Download
                     </button>
                   </div>
                 </div>
