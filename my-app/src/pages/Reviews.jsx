@@ -12,7 +12,7 @@ import {
   ThumbsUp,
   MessageCircle,
   Bookmark,
-  Users,
+  //Users,
   Menu,
   MoreVertical,
   Download
@@ -84,9 +84,12 @@ export default function Reviews() {
           <Link to="/dashboard" className="nav-item"><span className="nav-icon">🏠</span> Dashboard</Link>
           <Link to="/materials" className="nav-item"><FileText size={18} /> My Materials</Link>
           <Link to="/reviews" className="nav-item active"><MessageCircle size={18} /> Reviews</Link>
-          <Link to="/groups" className="nav-item"><Users size={18} /> Study Groups</Link>
+           <Link to="/downloads" className="nav-item"> 
+                        <Download size={18} /> 
+                        Downloads
+                       </Link>
           <Link to="/bookmarks" className="nav-item"><Bookmark size={18} /> Bookmarks</Link>
-          <Link to="/search" className="nav-item"><Search size={18} /> Search</Link>
+          
         </nav>
         <div className="sidebar-footer">
           <Link to="/settings" className="settings-link">⚙️ Settings</Link>

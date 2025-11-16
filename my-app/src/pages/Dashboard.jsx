@@ -12,8 +12,10 @@ import {
   Bookmark,
   TrendingUp,
   FileText,
+  MessageCircle,
   MoreVertical,
   Download // Import the Download icon
+  
 } from "lucide-react";
 
 export default function Dashboard() {
@@ -134,6 +136,10 @@ export default function Dashboard() {
           <Link to="/materials" className="nav-item">
             <FileText size={18} />
             My Materials
+          </Link>
+          <Link to="/reviews" className="nav-item">
+            <MessageCircle size={18} />
+            Reviews
           </Link>
           {/* UPDATED: Changed icon to Download */}
           <Link to="/downloads" className="nav-item"> 

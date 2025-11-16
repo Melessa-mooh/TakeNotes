@@ -11,8 +11,9 @@ import {
   Menu,
   FileText,
   MessageCircle,
-  Users,
+  //Users,
   Bookmark,
+  Download 
 } from "lucide-react";
 
 export default function Settings() {
@@ -46,21 +47,19 @@ export default function Settings() {
             <MessageCircle size={18} />
             Reviews
           </Link>
+          <Link to="/downloads" className="nav-item"> 
+             <Download size={18} /> 
+             Downloads
+            </Link>
 
-          <Link to="/groups" className="nav-item">
-            <Users size={18} />
-            Study Groups
-          </Link>
+          
 
           <Link to="/bookmarks" className="nav-item">
             <Bookmark size={18} />
             Bookmarks
           </Link>
 
-          <Link to="/search" className="nav-item">
-            <Search size={18} />
-            Search
-          </Link>
+         
         </nav>
 
         <div className="sidebar-footer">
