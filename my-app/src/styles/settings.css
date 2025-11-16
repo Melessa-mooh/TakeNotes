@@ -1,0 +1,70 @@
+.settings-page {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.settings-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.settings-subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.settings-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.settings-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.settings-icon {
+  background: #f4f4f4;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.settings-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.settings-card p {
+  margin: 2px 0 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* FIXED: Make links behave like cards without changing color */
+.settings-card-link,
+.settings-card-link:link,
+.settings-card-link:visited,
+.settings-card-link:hover,
+.settings-card-link:active {
+  text-decoration: none;  /* remove underline */
+  color: inherit;         /* keep text/icon color */
+  display: block;         /* make whole card clickable */
+}
+
+/* Apply hover effect to card through the link */
+.settings-card-link:hover .settings-card {
+  transform: scale(1.01);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}

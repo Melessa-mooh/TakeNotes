@@ -5,7 +5,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Bookmarks from "./pages/Bookmarks";
-
+import Reviews from "./pages/Reviews";
+import Settings from "./pages/Settings";
+import ProfileSettings from "./pages/profileSettings";
+import AccountSettings from "./pages/accountSettings";
 
 
 export default function App() {
@@ -17,6 +20,11 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
+        <Route path="/reviews" element={<Reviews />} />
+         <Route path="/settings" element={<Settings />} />
+         <Route path="/settings/profile" element={<ProfileSettings />} />
+         <Route path="/settings/account" element={<AccountSettings />} />
+
       </Routes>
     </Router>
   );

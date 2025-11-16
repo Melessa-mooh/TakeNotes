@@ -1,0 +1,140 @@
+.profile-settings-container {
+  padding: 25px;
+}
+
+.settings-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.settings-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Profile Header Card */
+.profile-header-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: 95%;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 3px 0;
+  color: #555;
+}
+
+.edit-photo-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 95px;
+  background: #b70000;
+  border: none;
+  color: white;
+  padding: 5px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Profile Details Card */
+.profile-details-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  margin-top: 25px;
+  width: 95%;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 1px solid #b70000;
+  color: #b70000;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.details-subtext {
+  margin-top: 5px;
+  color: #555;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.form-group {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.cancel-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #700000;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
